@@ -1,1 +1,1 @@
-# Ruby_Capstone_Project--LINTER-
+# Ruby_Capstone_Project-LINTER

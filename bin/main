@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+puts "hello G"
+puts "you rock"
+puts "yea i mean it"

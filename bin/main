@@ -47,16 +47,14 @@ else
                             linter.block_errors,
                             linter.empty_line_eof_errors,
                             linter.line_indentation_errors,
-                            linter.block_not_closed,
-                            linter.missing_bracket_errors)
+                            linter.block_not_closed)
   puts "********** TOTAL ERRORS #{errors.total_errors} **********"
   puts ''
   puts ''
   puts errors.print_errors
 
   if (linter.trailing_space_errors.length + linter.operator_spacing_errors.length +
-      linter.empty_line_eof_errors.length + linter.multiple_empty_lines_errors.length +
-      linter.missing_bracket_errors).positive?
+      linter.empty_line_eof_errors.length + linter.multiple_empty_lines_errors.length).positive?
     print 'Do you want to auto-correct the trailing white spaces,'
     puts ' spacing around operators, empty line at end of file and multiple empty lines errors? Y/n'
     answer = gets.chomp.upcase
@@ -73,7 +71,7 @@ else
         linter.arr.each do |n|
           f.puts n
         end
-      end
+    end
       total_errors = errors.total_errors
       linter.validate(answer)
       errors = ErrorHandler.new(linter.missing_parenthesis,

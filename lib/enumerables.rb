@@ -1,4 +1,4 @@
-module Enumerable
+module Enumerable 
   def my_each
     x=0
     until x > self.length - 1
@@ -7,6 +7,22 @@ module Enumerable
     end
     self
   end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   def my_each_with_index
     x=0
@@ -49,7 +65,7 @@ module Enumerable
     def my_none?
       result = true
       self.my_each do |item|
-       result = false if yield(item) 
+       result = false if yield(item
       end
       result 
     end
@@ -80,6 +96,4 @@ module Enumerable
 
 end
 
-[1,2,3].my_map do |item|
-  2 * item
-end
+
